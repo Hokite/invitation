@@ -32,6 +32,3 @@ npm run build
 
 공개 URL: https://hokite.github.io/invitation/
 
-## Kakao Map
-
-The location section uses Kakao Maps JavaScript SDK. GitHub Actions injects the JavaScript key from the repository secret `KAKAO_MAP_JAVASCRIPT_KEY` as `VITE_KAKAO_MAP_KEY` during the production build.
