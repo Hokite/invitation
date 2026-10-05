@@ -115,6 +115,9 @@ h2 { margin: 0 0 34px; font-family: Georgia, "Nanum Myeongjo", serif; font-weigh
 .month b { padding: 0 12px; font: 400 38px/1 Georgia, serif; color: #375043; }
 .week { display: grid; grid-template-columns: repeat(7, 1fr); min-height: 38px; align-items: center; font-size: 13px; }
 .labels { min-height: 30px; font-size: 10px; color: #89928d; }
+.calendar .week span:first-child {
+  color: #b75a54;
+}
 .event-day { width: 30px; height: 30px; margin: auto; display: grid; place-items: center; border-radius: 50%; color: white; background: #385344; font-weight: 700; }
 .calendar-note { margin: 16px 0 0; padding-top: 17px; border-top: 1px solid rgba(49,72,59,.1); font-size: 12px; color: #6f7a73; }
 .countdown { margin: 8px 0 24px; font-size: 13px; color: #6d7972; }
