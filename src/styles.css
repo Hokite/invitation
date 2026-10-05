@@ -122,6 +122,27 @@ h2 { margin: 0 0 34px; font-family: Georgia, "Nanum Myeongjo", serif; font-weigh
 .outline-button { min-height: 48px; padding: 0 20px; border: 1px solid #456151; background: transparent; color: #385344; border-radius: 4px; }
 
 .location { background: #f0ece2; }
+.naver-map-card {
+  margin-bottom: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(46,68,56,.12);
+  border-radius: 4px;
+  background: rgba(255,255,255,.55);
+}
+.naver-map-card .naver-map-image-link {
+  margin: 0;
+  border: 0;
+  border-bottom: 1px solid rgba(46,68,56,.10);
+}
+.naver-map-card .venue {
+  border: 0;
+  background: rgba(255,255,255,.78);
+}
+.naver-map-card .address-row {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
+}
 .naver-map-image-link {
   position: relative;
   display: block;
