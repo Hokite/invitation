@@ -169,7 +169,6 @@ export default function App() {
                 {row.map((item, j) => <span key={j} className={item === 7 ? 'event-day' : ''}>{item || ''}</span>)}
               </div>
             ))}
-            <p className="calendar-note">7일, {invitation.name}님의 환갑연</p>
           </div>
 
           {countdown > 0 && <p className="countdown">함께할 날까지 <strong>D-{countdown}</strong></p>}
