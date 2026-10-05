@@ -121,11 +121,12 @@ export default function App() {
           <div className="hero-date">{yy} | {mm} | {dd}</div>
           <div className="hero-day">{weekdayEn}</div>
 
-          <div className="hero-photo-frame" aria-label="사진이 들어갈 영역">
-            <div className="hero-photo-placeholder">
-              <span>PHOTO</span>
-              <small>추후 사진이 들어갈 자리입니다</small>
-            </div>
+          <div className="hero-photo-frame">
+            <img
+              className="hero-photo"
+              src={`${import.meta.env.BASE_URL}images/수채화로 그린 작은 갤러리 풍경.png`}
+              alt="환갑 초대장 메인 이미지"
+            />
           </div>
 
           <div className="hero-name-row">
