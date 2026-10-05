@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react';
 import { invitation } from './config';
+import KakaoMap from './KakaoMap';
 
 const rows = [
   [1, 2, 3, 4, 5, 6, 7],
@@ -180,6 +181,8 @@ export default function App() {
         <section className="location section" id="location">
           <p className="eyebrow">COME CELEBRATE WITH US</p>
           <h2>오시는 길</h2>
+          <KakaoMap address={invitation.address} venue={invitation.venue} />
+
           <div className="venue">
             <p className="muted">함께 모이는 곳</p>
             <h3>{invitation.venue}</h3>
