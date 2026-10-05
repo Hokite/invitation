@@ -42,6 +42,13 @@ button { cursor: pointer; font: inherit; }
   width: 100%;
   max-width: 360px;
 }
+.hero-photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border: 1px solid rgba(115, 108, 104, .14);
+}
 .hero-photo-placeholder {
   width: 100%;
   aspect-ratio: 3 / 4;
