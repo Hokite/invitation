@@ -130,8 +130,7 @@ export default function App() {
 
           <div className="hero-name-row">
             <strong>{invitation.name}</strong>
-            <span>|</span>
-            <strong>환갑연</strong>
+            <strong>환갑연에 초대합니다.</strong>
           </div>
 
           <p className="hero-meta">{label} {eventTimeText}</p>
