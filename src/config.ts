@@ -1,7 +1,7 @@
 export const invitation = {
   name: '이광암',
   eventDate: '2026-11-07',
-  eventTime: '',
+  eventTime: '11:00',
   venue: '마키노차야 광교점',
   address: '경기도 수원시 영통구 광교중앙로 145',
   building: '광교엘포트아이파크',
