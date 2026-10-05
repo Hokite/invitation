@@ -138,6 +138,7 @@ h2 { margin: 0 0 34px; font-family: Georgia, "Nanum Myeongjo", serif; font-weigh
   border-bottom: 1px solid rgba(46,68,56,.10);
 }
 .naver-map-card .venue {
+  padding: 10px 14px;
   border: 0;
   background: rgba(255,255,255,.78);
 }
@@ -145,6 +146,9 @@ h2 { margin: 0 0 34px; font-family: Georgia, "Nanum Myeongjo", serif; font-weigh
   margin-top: 0;
   padding-top: 0;
   border-top: 0;
+}
+.naver-map-card .address-row button {
+  padding: 6px 9px;
 }
 .naver-map-image-link {
   position: relative;
