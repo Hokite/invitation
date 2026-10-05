@@ -27,6 +27,8 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Build
+        env:
+          VITE_KAKAO_MAP_KEY: ${{ secrets.KAKAO_MAP_JAVASCRIPT_KEY }}
         run: npm run build
       - name: Setup Pages
         uses: actions/configure-pages@v5
