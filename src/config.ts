@@ -3,7 +3,7 @@ export const invitation = {
   eventDate: '2026-11-07',
   eventTime: '11:00',
   venue: '마키노차야 광교점',
-  address: '경기도 수원시 영통구 광교중앙로 145',
+  address: '경기 수원시 영통구 광교중앙로 145 엘포트몰 3층 3호',
   building: '광교엘포트아이파크',
   transport: '신분당선 광교중앙(아주대)역 4번 출구 · 도보 약 11분',
   parking: '건물 주차장을 이용하실 수 있습니다. 주차 지원 시간은 확인 후 안내드리겠습니다.',
