@@ -170,9 +170,6 @@ export default function App() {
               </div>
             ))}
           </div>
-
-          {countdown > 0 && <p className="countdown">함께할 날까지 <strong>D-{countdown}</strong></p>}
-          <button className="outline-button" onClick={saveDate}>날짜 저장 · {eventTimeText}</button>
         </section>
 
         <section className="location section" id="location">
