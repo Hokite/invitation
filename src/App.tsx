@@ -129,6 +129,12 @@ export default function App() {
             />
           </div>
 
+          <p className="hero-birthday-message">
+            Many happy returns<br />
+            on your 60th birthday.<br />
+            We hope you have a fabulous day.
+          </p>
+
           <div className="hero-name-row">
             <strong>아버지의 환갑연에 초대합니다.</strong>
           </div>
@@ -145,15 +151,6 @@ export default function App() {
           <p className="signature">{invitation.name}님의 <b>가족 드림</b></p>
         </section>
 
-        <section className="wishes section">
-          <p className="eyebrow">HAPPY 60TH BIRTHDAY</p>
-          <h2>아버지께 전하는 마음</h2>
-          <blockquote>
-            <p className="english">{invitation.birthdayMessageEn}</p>
-            <div className="divider">✦</div>
-            <p>{invitation.birthdayMessageKo}</p>
-          </blockquote>
-        </section>
 
         <section className="schedule section">
           <p className="eyebrow">OUR SPECIAL DAY</p>
