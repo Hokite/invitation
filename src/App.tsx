@@ -194,10 +194,6 @@ export default function App() {
               <span className="naver-map-badge">
                 마키노차야 광교점
               </span>
-
-              <span className="naver-map-caption">
-                지도를 누르면 네이버지도로 이동합니다.
-              </span>
             </a>
 
             <div className="venue">
