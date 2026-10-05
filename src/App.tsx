@@ -1,6 +1,5 @@
 import { useMemo, useState } from 'react';
 import { invitation } from './config';
-import KakaoMap from './KakaoMap';
 
 const rows = [
   [1, 2, 3, 4, 5, 6, 7],
@@ -181,7 +180,22 @@ export default function App() {
         <section className="location section" id="location">
           <p className="eyebrow">COME CELEBRATE WITH US</p>
           <h2>오시는 길</h2>
-          <KakaoMap venue={invitation.venue} />
+          <a
+            className="naver-map-image-link"
+            href={`https://map.naver.com/p/search/${query}`}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="네이버지도에서 마키노차야 광교점 열기"
+          >
+            <img
+              className="naver-map-image"
+              src="https://simg.pstatic.net/static.map/v2/map/staticmap.bin?caller=smarteditor&h=360&markers=color%3A0x11cc73%7Csize%3Amid%7Cpos%3A127.0577814+37.2870876%7CviewSizeRatio%3A0.7%7Ctype%3Ad&scale=2&w=700"
+              alt="마키노차야 광교점 주변 네이버 지도"
+              loading="lazy"
+            />
+            <span className="naver-map-badge">마키노차야 광교점</span>
+            <span className="naver-map-caption">지도를 누르면 네이버지도로 이동합니다.</span>
+          </a>
 
           <div className="venue">
             <p className="muted">함께 모이는 곳</p>
