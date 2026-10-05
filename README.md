@@ -31,3 +31,7 @@ npm run build
 `main` 브랜치에 push하면 `.github/workflows/pages.yml`이 자동으로 GitHub Pages 배포를 수행합니다.
 
 공개 URL: https://hokite.github.io/invitation/
+
+## Kakao Map
+
+The location section uses Kakao Maps JavaScript SDK. GitHub Actions injects the JavaScript key from the repository secret `KAKAO_MAP_JAVASCRIPT_KEY` as `VITE_KAKAO_MAP_KEY` during the production build.
