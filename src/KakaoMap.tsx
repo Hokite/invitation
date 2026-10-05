@@ -1,13 +1,15 @@
 import { useEffect, useRef, useState } from 'react';
 
 type Props = {
-  address: string;
   venue: string;
 };
 
-export default function KakaoMap({ address, venue }: Props) {
+const VENUE_LAT = 37.2870876;
+const VENUE_LNG = 127.0577814;
+
+export default function KakaoMap({ venue }: Props) {
   const mapRef = useRef<HTMLDivElement | null>(null);
-  const [status, setStatus] = useState<'loading' | 'ready' | 'missing-key' | 'error'>('loading');
+  const [status, setStatus] = useState<'loading' | 'ready' | 'missing-key' | 'sdk-error'>('loading');
 
   useEffect(() => {
     const key = import.meta.env.VITE_KAKAO_MAP_KEY as string | undefined;
@@ -19,21 +21,17 @@ export default function KakaoMap({ address, venue }: Props) {
 
     const renderMap = () => {
       const kakao = (window as any).kakao;
+
       if (!kakao?.maps || !mapRef.current) {
-        setStatus('error');
+        setStatus('sdk-error');
         return;
       }
 
       kakao.maps.load(() => {
-        const geocoder = new kakao.maps.services.Geocoder();
+        try {
+          if (!mapRef.current) return;
 
-        geocoder.addressSearch(address, (result: any[], geocoderStatus: string) => {
-          if (geocoderStatus !== kakao.maps.services.Status.OK || !result[0]) {
-            setStatus('error');
-            return;
-          }
-
-          const position = new kakao.maps.LatLng(Number(result[0].y), Number(result[0].x));
+          const position = new kakao.maps.LatLng(VENUE_LAT, VENUE_LNG);
           const map = new kakao.maps.Map(mapRef.current, {
             center: position,
             level: 4,
@@ -59,7 +57,9 @@ export default function KakaoMap({ address, venue }: Props) {
           });
 
           setStatus('ready');
-        });
+        } catch {
+          setStatus('sdk-error');
+        }
       });
     };
 
@@ -70,6 +70,7 @@ export default function KakaoMap({ address, venue }: Props) {
         renderMap();
       } else {
         existing.addEventListener('load', renderMap, { once: true });
+        existing.addEventListener('error', () => setStatus('sdk-error'), { once: true });
       }
       return;
     }
@@ -77,11 +78,11 @@ export default function KakaoMap({ address, venue }: Props) {
     const script = document.createElement('script');
     script.dataset.kakaoMapSdk = 'true';
     script.async = true;
-    script.src = `https://dapi.kakao.com/v2/maps/sdk.js?appkey=${encodeURIComponent(key)}&autoload=false&libraries=services`;
+    script.src = `https://dapi.kakao.com/v2/maps/sdk.js?appkey=${encodeURIComponent(key)}&autoload=false`;
     script.addEventListener('load', renderMap, { once: true });
-    script.addEventListener('error', () => setStatus('error'), { once: true });
+    script.addEventListener('error', () => setStatus('sdk-error'), { once: true });
     document.head.appendChild(script);
-  }, [address, venue]);
+  }, [venue]);
 
   return (
     <div className="kakao-map-card">
@@ -89,8 +90,8 @@ export default function KakaoMap({ address, venue }: Props) {
       {status !== 'ready' && (
         <div className="kakao-map-state" role="status">
           {status === 'loading' && '지도를 불러오는 중입니다.'}
-          {status === 'missing-key' && '지도 API 설정이 필요합니다.'}
-          {status === 'error' && '지도를 불러오지 못했습니다.'}
+          {status === 'missing-key' && '지도 API 키 설정이 필요합니다.'}
+          {status === 'sdk-error' && '카카오 지도 설정을 확인해주세요.'}
         </div>
       )}
     </div>
