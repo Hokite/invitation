@@ -70,6 +70,12 @@ button { cursor: pointer; font: inherit; }
   font-size: 11px;
   letter-spacing: .02em;
 }
+.hero-birthday-message {
+  margin: 0 0 24px;
+  color: #6f6a66;
+  font: italic 16px/1.7 Georgia, "Times New Roman", serif;
+  letter-spacing: .01em;
+}
 .hero-name-row {
   display: inline-flex;
   align-items: center;
@@ -100,10 +106,6 @@ h2 { margin: 0 0 34px; font-family: Georgia, "Nanum Myeongjo", serif; font-weigh
 .letter p:not(.eyebrow):not(.signature) { margin: 0 0 27px; font-size: 15px; line-height: 2.05; color: #edf0ec; }
 .signature { margin: 38px 0 0; font-size: 13px; letter-spacing: .08em; }
 
-.wishes { background: linear-gradient(160deg, #f7f1e9, #eee9df); }
-.wishes blockquote { margin: 0; padding: 30px 18px 0; font-size: 17px; line-height: 1.95; white-space: pre-line; }
-.english { font: italic 22px/1.7 Georgia, serif; color: #40564a; }
-.divider { margin: 24px 0; color: #8c9a91; }
 
 .schedule { background: #fbf8f1; }
 .date { font-size: 17px; margin: 0 0 8px; font-weight: 650; }
