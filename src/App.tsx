@@ -196,9 +196,6 @@ export default function App() {
           </a>
 
           <div className="venue">
-            <p className="muted">함께 모이는 곳</p>
-            <h3>{invitation.venue}</h3>
-            <p>{invitation.building}</p>
             <div className="address-row">
               <span>{invitation.address}</span>
               <button onClick={copyAddress}>복사</button>
