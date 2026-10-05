@@ -115,6 +115,11 @@ h2 { margin: 0 0 34px; font-family: Georgia, "Nanum Myeongjo", serif; font-weigh
 .outline-button { min-height: 48px; padding: 0 20px; border: 1px solid #456151; background: transparent; color: #385344; border-radius: 4px; }
 
 .location { background: #f0ece2; }
+.kakao-map-card { position: relative; margin: 0 0 14px; overflow: hidden; background: #e9e7e2; border: 1px solid rgba(46,68,56,.12); }
+.kakao-map { width: 100%; aspect-ratio: 16 / 9; min-height: 220px; }
+.kakao-map-state { position: absolute; inset: 0; display: grid; place-items: center; padding: 20px; background: #ebe9e5; color: #77716d; font-size: 12px; letter-spacing: .01em; }
+.kakao-map-label { position: relative; padding: 7px 11px; border: 1px solid rgba(41,47,43,.18); border-radius: 2px; background: rgba(255,255,255,.97); box-shadow: 0 2px 8px rgba(0,0,0,.08); color: #2f3430; font-size: 12px; font-weight: 600; white-space: nowrap; }
+.kakao-map-label::after { content: ""; position: absolute; left: 50%; bottom: -5px; width: 8px; height: 8px; transform: translateX(-50%) rotate(45deg); background: rgba(255,255,255,.97); border-right: 1px solid rgba(41,47,43,.18); border-bottom: 1px solid rgba(41,47,43,.18); }
 .venue { padding: 26px 22px; border: 1px solid rgba(46,68,56,.12); background: rgba(255,255,255,.55); text-align: left; }
 .venue h3 { margin: 5px 0; font-size: 20px; }
 .venue p { margin: 4px 0; }
