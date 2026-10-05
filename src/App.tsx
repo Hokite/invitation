@@ -212,13 +212,6 @@ export default function App() {
             <p><b>주차 안내</b><br />{invitation.parking}</p>
           </div>
         </section>
-
-        <footer className="closing section">
-          <div className="mini-sixty">60</div>
-          <h2>함께해 주시는 마음,<br />오래도록 간직하겠습니다.</h2>
-          <p>소중한 걸음에 미리 감사드립니다.</p>
-          <p className="signature">{invitation.name}님의 가족 올림</p>
-        </footer>
       </main>
 
       <nav className="bottom-bar">
